@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — multy_project</title>
+  </head>
+  <body>
+    <main class="page">
+      <section class="login-panel" aria-labelledby="login-heading">
+        <h1 id="login-heading" class="logo">Welcome back</h1>
+        <form id="login-form" class="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+            />
+            <div class="field-error" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-row">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                minlength="6"
+              />
+              <button
+                type="button"
+                id="toggle-password"
+                class="toggle-password"
+                aria-pressed="false"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+            <div class="field-error" aria-live="polite"></div>
+          </div>
+
+          <div class="row between">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link">Forgot?</a>
+          </div>
+
+          <button type="submit" class="primary">Sign in</button>
+
+          <div class="row center muted">
+            <span>New here?</span>
+            <a href="#" class="link">Create account</a>
+          </div>
+
+          <div id="submit-message" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
