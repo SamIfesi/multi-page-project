@@ -29,7 +29,7 @@
 body {
   background: var(--bg-gradient);
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   padding: 2rem;
   min-height: 100vh;
@@ -47,6 +47,7 @@ body {
   font-size: 1.5rem;
   color: var(--text);
   text-align: center;
+  margin-bottom: 1rem;
 }
 .login-form {
   display: flex;
@@ -57,13 +58,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin: 1rem 0;
 }
 label {
   font-size: 0.9rem;
   color: var(--text-500);
 }
-input {
+input[type="email"],
+input[type="password"] {
   background: transparent;
   width: 100%;
   border: 1px solid var(--Input-border);
@@ -82,8 +83,8 @@ input:focus {
   gap: 0.8rem;
   position: relative;
 }
-.hide{
-  display:none;
+.hide {
+  display: none;
 }
 .show-password {
   position: absolute;
@@ -96,35 +97,18 @@ input:focus {
   opacity: 0.6;
   -webkit-tap-highlight-color: transparent;
 }
-.toggle-password {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  color: var(--primary-700);
-  padding: 8px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.row {
+.remember {
   display: flex;
-  gap: 12px;
   align-items: center;
-}
-.between {
   justify-content: space-between;
-}
-.center {
-  justify-content: center;
-}
-.text-500 {
-  color: var(--text-500);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .primary {
   background: var(--secondary);
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 0.85rem;
+  border-radius: 0.8rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -134,7 +118,6 @@ input:focus {
 .link {
   color: var(--primary-700);
   text-decoration: none;
-  margin-left: 6px;
 }
 .field-error {
   color: var(--red);
@@ -144,14 +127,17 @@ input:focus {
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
   color: var(--text-500);
 }
 #submit-message {
-  margin-top: 6px;
+  margin-top: 0.3rem;
   color: var(--primary-700);
-  min-height: 20px;
+  min-height: 1.25rem;
 }
-
-@media (min-width: 44rem) {
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:.5rem
 }
