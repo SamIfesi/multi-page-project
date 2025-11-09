@@ -1,11 +1,10 @@
 import "./style.css";
 
-// Simple client-side login UI behaviors: validation, toggle password, fake submit
 const q = (s) => document.querySelector(s);
 const form = q("#login-form");
 const emailInput = q("#email");
 const passwordInput = q("#password");
-const toggleBtn = q("#toggle-password");
+const toggleBtn = q("#openEye");
 const submitMessage = q("#submit-message");
 
 function setFieldError(input, msg) {
